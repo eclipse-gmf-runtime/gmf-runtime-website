@@ -58,12 +58,12 @@ $html = <<<EOHTML
 
 <div>
 <h3>Current Status</h3>
-<p>Development is underway for the GMF Runtime 1.7.0 for Eclipse Kepler, due June 2013.</p>
+<p>Development is underway for the proposed GMF Runtime 1.8.0 release for Eclipse Luna, due June 2014.</p>
 </div>
 
 <div id="headlines">
-<h3>GMF Runtime 1.6.0 Now Available</h3>
-<p><i>June 23, 2012 -</i> GMF Runtime 1.6.0 for Eclipse Juno. Check the <a href="http://www.eclipse.org/modeling/gmp/downloads/?project=gmf-runtime">Download</a> site to download.</p>
+<h3>GMF Runtime 1.7.0 Now Available</h3>
+<p><i>June 26, 2013 -</i> GMF Runtime 1.7.0 for Eclipse Kepler has been released. Check the <a href="/gmf-runtime/downloads.php">Downloads</a> page.</p
 </div>
 
 </div>
