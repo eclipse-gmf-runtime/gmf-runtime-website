@@ -1,6 +1,6 @@
 <?php
 /******************************************************************************
- * Copyright (c) 2013 IBM Corporation and others.
+ * Copyright (c) 2013, 2014 IBM Corporation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -33,7 +33,7 @@ function showNotes()
 	<div class="homeitem3col">
 		<h3>GMF Runtime Downloads</h3>
 		<p>In the Helios release, the GMF project was restructured into the GMF Tooling, GMF Runtime and GMF Notation projects under the Graphical Modeling Project.</p>
-		<p>A table of previous GMF releases can be found <a href="/modeling/gmp/development/releases.php"><b>HERE</b></a></p>
+		<p>A table of previous GMF releases can be found <a href="/gmf-runtime/releases.php"><b>HERE</b></a></p>
 		<p>All downloads are provided under the terms and conditions of the <a href="http://www.eclipse.org/legal/epl/notice.html">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
 	</div>
 <?php

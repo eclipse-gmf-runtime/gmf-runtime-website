@@ -46,7 +46,7 @@ $theme = "Nova";
 # Break the navigation into sections
 $Nav->addNavSeparator("GMF Runtime", 	"/gmf-runtime");
 $Nav->addCustomNav("Downloads", "/gmf-runtime/downloads.php", "_self", 3);
-$Nav->addCustomNav("Download Versions", "/gmf-runtime/releases.php", "_self");
+$Nav->addCustomNav("Releases", "/gmf-runtime/releases.php", "_self");
 $Nav->addCustomNav("Documentation", "/gmf-runtime/documentation.php", "_self", 3);
 $Nav->addCustomNav("Wiki", "http://wiki.eclipse.org/Graphical_Modeling_Framework", "_self", 3);
 $Nav->addCustomNav("Support", "/gmf-runtime/support.php", "_self", 3);
@@ -66,6 +66,7 @@ $Menu->addMenuItem("GMF Runtime", "/gmf-runtime", "_self");
 $Menu->addMenuItem("Downloads", "/gmf-runtime/downloads.php", "_self");
 $Menu->addMenuItem("Documentation", "/gmf-runtime/documentation.php", "_self");
 $Menu->addMenuItem("About", "http://www.eclipse.org/projects/project_summary.php?projectid=modeling.gmp.gmf-runtime", "_self");
+$Menu->addMenuItem("Releases", "/gmf-runtime/releases.php", "_self");
 
 # To define additional CSS or other pre-body headers
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/gmf-runtime/style.css"/>');
