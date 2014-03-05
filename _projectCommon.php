@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright (c) 2009, 2013 Eclipse Foundation and others.
+ * Copyright (c) 2009, 2014 Eclipse Foundation and others.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -12,30 +12,17 @@
 ********************************************************************************/
 $Nav->setLinkList(null);
 
-$PR = "gmf-runtime";
-$projectName = "GMF Runtime";
-$topLevel = "modeling/gmp";
+$projectname = "gmf-runtime";
+$projectdisplayname = "GMF Runtime";
+$modelingprojectname = "modeling";
+$topprojectname = "gmp"; 
+$shortprojectname = "gmf-runtime";
 
 $debug = (isset ($_GET["debug"]) && preg_match("/^\d+$/", $_GET["debug"]) ? $_GET["debug"] : -1);
-
-$rooturl = "http://" . $_SERVER["HTTP_HOST"] . "/$PR";
-$downurl = "http://www.eclipse.org";
-$bugurl = "https://bugs.eclipse.org";
-
-$extraprojects = array(); //components with only downloads, no info yet, "prettyname" => "directory"
-$nodownloads = array(); //components with only information, no downloads, or no builds available yet, "projectkey"
-$nonewsgroup = array(); //components without newsgroup
-$nomailinglist = array(); //components without mailinglist
-$incubating = array(); // components which are incubating
-$nomenclature = "Project"; //are we dealing with "components" or "projects"?
 
 include_once($_SERVER["DOCUMENT_ROOT"] . "/gmf-runtime/downloads/scripts.php");
 
 $regs = null;
-$projects = array("GMF Runtime" => "gmf-runtime");
-$proj = "/modeling"; // (isset($_GET["project"]) && preg_match("/^(" . join("|", $projects) . ")$/", $_GET["project"], $regs) ? $regs[1] : getProjectFromPath($PR));
-$projct= "gmf-runtime";
-
 $buildtypes = array(
 		"R" => "Release",
 		"S" => "Stable",

@@ -1,6 +1,6 @@
 <?php
 /******************************************************************************
- * Copyright (c) 2013 IBM Corporation and others.
+ * Copyright (c) 2013, 2014 IBM Corporation and others.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -14,71 +14,39 @@ $deps = array(
 	"eclipse" => "<a href=\"http://www.eclipse.org/eclipse/\">Eclipse</a>",
 );
 
-require_once($_SERVER["DOCUMENT_ROOT"] . "/gmf-runtime/downloads/downloads-scripts.php");
+require_once($_SERVER["DOCUMENT_ROOT"] . "/$projectname/downloads/downloads-scripts.php");
 
-if (is_array($projects))
+$numzips = 0;
+if (isset($dls[$shortprojectname]) && is_array($dls[$shortprojectname]))
 {
-	$projectArray = getProjectArray($projects, $extraprojects, $nodownloads, $PR);
-	$proj = "/" . (isset($_GET["project"]) && preg_match("/^(?:" . join("|", $projects) . ")$/", $_GET["project"]) ? $_GET["project"] :	""); # default
-}
-else
-{
-	$proj = "";
-}
-
-$proj = $PR;
-$projct = $PR;
-if (strstr($PR, "/") !== false)
-{
-	list($topProj, $parentProj) = explode("/", $PR); # modeling, emf
-}
-else
-{
-	list($topProj, $parentProj) = array("NONE", $PR); # NONE, gef
-}
-
-if (isset($projct) && isset($hasmoved) && is_array($hasmoved) && array_key_exists($projct,$hasmoved))
-{
-	header("Location: http://www.eclipse.org/modeling/" . $hasmoved[$projct] . "/downloads/?" . $_SERVER["QUERY_STRING"]);
-	exit;
-}
-
-$numzips = isset($extraZips) ? 0 - sizeof($extraZips) : 0; // if extra zips (new zips added later), reduce the "required" count when testing a build
-if (isset($dls[$proj]) && is_array($dls[$proj]))
-{
-	foreach (array_keys($dls[$proj]) as $z)
+	foreach (array_keys($dls[$shortprojectname]) as $z)
 	{
-		$numzips += sizeof($dls[$proj][$z]);
+		$numzips += sizeof($dls[$shortprojectname][$z]);
 	}
 }
 
 # store an array of paths to hide
-$hiddenBuilds = is_readable($_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/hidden.txt") ? file($_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/hidden.txt") : array();
+$hiddenBuilds = is_readable($_SERVER["DOCUMENT_ROOT"] . "/$projectname/downloads/hidden.txt") ? file($_SERVER["DOCUMENT_ROOT"] . "/$projectname/downloads/hidden.txt") : array();
 
-// include extras-$proj.php or extras-$PR.php
-$files = array ($_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $projct . ".php", $_SERVER["DOCUMENT_ROOT"] . "/$PR/downloads/extras-" . $PR . ".php");
-foreach ($files as $file)
+// include extras-$projectname.php
+$extras = $_SERVER["DOCUMENT_ROOT"] . "/$projectname/downloads/extras-$projectname.php";
+if (file_exists($extras))
 {
-	if (file_exists($file))
-	{
-		include_once($file);
-		break;
-	}
+	include_once($extras);
 }
 
 $hadLoadDirSimpleError = 1; //have we echoed the loadDirSimple() error msg yet? if 1, omit error; if 0, echo at most 1 error
 $sortBy = (isset($_GET["sortBy"]) && preg_match("/^(date)$/", $_GET["sortBy"], $regs) ? $regs[1] : "");
 $showAll = (isset($_GET["showAll"]) && preg_match("/^(1)$/", $_GET["showAll"], $regs) ? $regs[1] : "0");
 $showMax = (isset($_GET["showMax"]) && preg_match("/^(\d+)$/", $_GET["showMax"], $regs) ? $regs[1] : ($sortBy == "date" ? "10" : "5"));
-$showBuildResults = !isset($_GET["light"]) && !isset($_GET["nostatus"]); // suppress display of status to render page faster
 
-$PWD = "/home/data2/httpd/download.eclipse.org/$topLevel/$PR/downloads/drops";
+$PWD = "/home/data2/httpd/download.eclipse.org//$modelingprojectname/$topprojectname/$projectname/downloads/drops";
 
 $downloadScript = getdownloadScript();
 $downloadPre = "";
 
 print "<div id=\"midcolumn\">\n";
-print "<h2>GMF Runtime P2 Repositories & SDK Dropins</h2>\n";
+print "<h2>$projectdisplayname P2 Repositories & SDK Dropins</h2>\n";
 print "<p>This page provides a bundled P2 repository and different SDK dropins (in runnable form) for each build.</p>";
 
 $branches = loadDirSimple($PWD, ".*", "d");
@@ -104,7 +72,7 @@ if (sizeof($builds) == 0 && sizeof($releases) == 0)
 {
 	print "<h2>Builds</h2>\n";
 	print "<ul>\n";
-	if (is_array($projectArray) && !in_array($projct, $projectArray))
+	if (is_array($projectArray) && !in_array($shortprojectname, $projectArray))
 	{
 		print "<li><i><b>Sorry!</b></i> There are no builds yet available for this component.</li>";
 	}
