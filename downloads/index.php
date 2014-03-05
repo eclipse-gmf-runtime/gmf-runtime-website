@@ -34,9 +34,10 @@ $dls = array(
 		"$shortprojectname" => array(
 				"$projectdisplayname" => array(
 						"<acronym title=\"Click to download archived All-In-One p2 Repo Update Site\"><img alt=\"Click to download archived All-In-One p2 Repo Update Site\" src=\"/$projectname/images/dl-icon-update-zip.gif\"/> <b style=\"color:green\">All-In-One Update Site</b></acronym>" => "$projectname-Update",
-						"GMF Runtime Master" => "runtime-Master",
-						"GMF Runtime SDK" => "sdk-runtime",
-						"GMF Runtime" => "runtime",
+						"GMF Runtime SDK" => "gmf-sdk-runtime",
+						"GMF Runtime" => "gmf-runtime",
+						"GMF Runtime Tests" => "gmf-tests-runtime",
+						"GMF Runtime Examples" => "gmf-examples-runtime",
 				)
 		),
 );
