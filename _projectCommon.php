@@ -32,8 +32,7 @@ $buildtypes = array(
 );
 
 # Set the theme for your project's web pages.
-# See http://eclipse.org/phoenix/
-$theme = "Nova";
+$theme = "solstice";
 
 # Define your project-wide Navigation here
 # This appears on the left of the page if you define a left nav
