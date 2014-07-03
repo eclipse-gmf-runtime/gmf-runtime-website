@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright (c) 2009, 2013 Eclipse Foundation and others.
+ * Copyright (c) 2009, 2014 Eclipse Foundation and others.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -18,7 +18,7 @@ $Nav = new Nav();
 $Menu = new Menu();
 include($App->getProjectCommon());
 
-$pageTitle 		= "Eclipse Graphical Modeling Framework (GMF) Project Releases";
+$pageTitle 		= "Eclipse GMF Runtime Project Releases";
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/gmf-runtime/style.css"/>');
 
 $html  = <<<EOHTML
@@ -42,11 +42,10 @@ $html  = <<<EOHTML
    td { font-family : Arial, Helvetica, sans-serif; padding: 3px; font-size : 8pt; text-align: left; vertical-align: top; border: 1px solid black;}
 </style>
 
-<p>The following table lists the releases completed over the years, with their version numbers. The table includes the four Graphical Modeling Projects; 
-GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependencies.</p>
+<p>The following table lists the releases completed over the years, with their version numbers. The table includes the GMF Runtime and GMF Notation, as well as their dependencies.</p>
 <table border="1">
 <tr class="top">
-<td>Eclipse<br>Simultanious<br>Release</td>
+<td>Eclipse<br>Simultaneous<br>Release</td>
 <td>Release<br>Date</td>
 <td><b>GMF<br>Runtime<br></b>[1]</td>
 <td><b>GMF<br>Notation<br></b>[1]</td>
@@ -58,9 +57,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>EMF<br>Transaction</td>
 <td>MDT<br>OCL</td>
 <td>MDT<br>UML2</td>
-<td><b>GMF<br>Tooling<br>(GMF SDK)</b></td>
-<td>QVT<br>OML</td>
-<td><b>Graphiti</b></td>
 </tr>
 
 <tr class="callisto">
@@ -76,9 +72,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.0.0</td>
 <td>1.0.0</td>
 <td rowspan="4">[3]</td>
-<td>1.0.0</td>
-<td rowspan="4">[4]</td>
-<td rowspan="4">[5]</td>
 </tr>
 
 <tr class="callisto">
@@ -87,7 +80,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="2">3.2.1</td>
 <td rowspan="2">3.2.1</td>
 <td rowspan="2">2.2.1</td>
-<td>1.0.1</td>
 <td>1.0.1</td>
 <td>1.0.1</td>
 <td>1.0.1</td>
@@ -101,7 +93,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="2">1.0.2</td>
 <td>1.0.2</td>
 <td rowspan="2">1.0.2</td>
-<td>1.0.2</td>
 </tr>
 
 <tr class="callisto">
@@ -110,7 +101,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>3.2.2</td>
 <td>3.2.2</td>
 <td>2.2.2</td>
-<td>1.0.3</td>
 <td>1.0.3</td>
 </tr>
 
@@ -127,9 +117,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.1.0</td>
 <td>1.1.0</td>
 <td>2.1.0</td>
-<td>2.0.0</td>
-<td rowspan="3">[4]</td>
-<td rowspan="3">[5]</td>
 </tr>
 
 <tr class="europa">
@@ -143,7 +130,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.1.1</td>
 <td>1.1.1</td>
 <td rowspan="2">2.1.1</td>
-<td>2.0.1</td>
 </tr>
 
 <tr class="europa">
@@ -154,7 +140,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>2.3.0</td>
 <td>1.1.2</td>
 <td>1.1.2</td>
-<td>2.0.2</td>
 </tr>
 
 <tr class="ganymede">
@@ -170,9 +155,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.2.0</td>
 <td>1.2.0</td>
 <td rowspan="2">2.2.0</td>
-<td>2.1.0</td>
-<td rowspan="5">[4]</td>
-<td rowspan="5">[5]</td>
 </tr>
 
 <tr class="ganymede">
@@ -182,7 +164,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="4">1.2.1</td>
 <td>1.2.1</td>
 <td>1.2.1</td>
-<td>2.1.1</td>
 </tr>
 
 <tr class="ganymede">
@@ -195,7 +176,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.2.2</td>
 <td>1.2.2</td>
 <td>2.2.1</td>
-<td>2.1.2</td>
 </tr>
 
 <tr class="ganymede">
@@ -207,7 +187,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="2">1.2.3</td>
 <td rowspan="2">1.2.3</td>
 <td rowspan="2">2.2.3</td>
-<td rowspan="2">2.1.3</td>
 </tr>
 
 <tr class="ganymede">
@@ -228,9 +207,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.3.0</td>
 <td rowspan="4">1.3.0</td>
 <td>3.0.0</td>
-<td>2.2.0</td>
-<td rowspan="2">2.0.0</td>
-<td rowspan="4">[5]</td>
 </tr>
 
 <tr class="galileo">
@@ -242,7 +218,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="3">1.3.1</td>
 <td rowspan="3">1.3.1</td>
 <td rowspan="3">3.0.1</td>
-<td>2.2.1</td>
 </tr>
 
 <tr class="galileo">
@@ -251,8 +226,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="2">1.3.0</td>
 <td rowspan="2">3.5.2</td>
 <td rowspan="2">3.5.2</td>
-<td rowspan="2">2.2.2</td>
-<td rowspan="2">2.0.1</td>
 </tr>
 
 <tr class="galileo">
@@ -273,9 +246,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="4">1.4.0</td>
 <td>3.0.0</td>
 <td>3.1.0</td>
-<td>2.3.0</td>
-<td>3.0.0</td>
-<td rowspan="4">[5]</td>
 </tr>
 
 <tr class="helios">
@@ -287,8 +257,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="3">2.6.1</td>
 <td>3.1.1</td>
 <td>3.0.1</td>
-<td rowspan="3">2.3.1</td>
-<td rowspan="3">3.0.1</td>
 </tr>
 
 <tr class="helios">
@@ -318,9 +286,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.5.0</td>
 <td>3.1.0</td>
 <td>3.2.0</td>
-<td>2.4.0</td>
-<td>3.1.0</td>
-<td>0.8.0</td>
 </tr>
 
 <tr class="juno">
@@ -336,9 +301,6 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td rowspan="4">1.6.0</td>
 <td>4.0.0</td>
 <td rowspan="4">4.0.0</td>
-<td rowspan="4">3.0.0</td>
-<td rowspan="4">3.2.0</td>
-<td rowspan="4">0.9.0</td>
 </tr>
 
 <tr class="juno">
@@ -376,27 +338,21 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 <td>1.7.0</td>
 <td>4.1.0</td>
 <td>4.1.0</td>
-<td>3.1.0</td>
-<td>3.3.0</td>
-<td>0.10.0</td>
 </tr>
 
 <tr class="luna">
 <td>Luna</td>
-<td>06/26/14</td>
+<td>06/25/14</td>
 <td>1.8.0</td>
 <td>1.8.0</td>
 <td>4.4.0</td>
-<td>3.10.0</td>
+<td>3.9.100</td>
 <td>2.10.0</td>
 <td>1.8.0</td>
 <td>1.8.0</td>
 <td>1.8.0</td>
-<td>4.2.0</td>
-<td>4.2.0</td>
-<td>3.2.0</td>
-<td>3.4.0</td>
-<td>0.11.0</td>
+<td>5.0.0</td>
+<td>5.0.0</td>
 </tr>
 
 <tr class="white">
@@ -404,9 +360,7 @@ GMF Runtime, GMF Notation, GMF Tooling and Graphiti, as well as their dependenci
 [1] - GMF Runtime and GMF Notation were not separate projects until Helios and the GMF Restructure.<br>
 [2] - GMF Notation was not a separate feature until Ganymede.<br>
 [3] - MDT OCL started depending on MDT UML2 in Europa.<br>
-[4] - GMF Tooling started depending on M2M QVT in Galileo.<br>
-[5] - Graphiti will have its first release in Indigo.<br>
-Last Updated June 24 2013
+Last Updated July 3 2014
 </td>
 </tr>
 </table>

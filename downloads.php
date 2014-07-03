@@ -40,7 +40,7 @@ unless otherwise specified.</p>
 <p>If you prefer an update-site or an SDK archive, you can download it from <a href="downloads/index.php">here directly</a>.</p>
 
 <h3>Nightly Builds</h3>
-<p>The nightly builds can also be used as a P2 repository. The nightly builds for the Luna simultaneous release can be accessed from <a href="https://hudson.eclipse.org/gmf-runtime/job/gmf-runtime-master/">Hudson</a>.</p>
+<p>The nightly builds can also be used as a P2 repository. The nightly builds for the Mars simultaneous release can be accessed from <a href="https://hudson.eclipse.org/gmf-runtime/job/gmf-runtime-master/">Hudson</a>.</p>
 
 <h3>Translations</h3>
 <p>Translations packages can be downloaded from the <a href="http://www.eclipse.org/babel/downloads.php">Babel project downloads page</a>.</p>
