@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright (c) 2009, 2013 Eclipse Foundation and others.
+ * Copyright (c) 2009, 2016 Eclipse Foundation and others.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -19,7 +19,6 @@ $Menu = new Menu();
 include($App->getProjectCommon());
 
 $pageTitle 		= "GMF Runtime Getting Involved";
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/gmf-runtime/style.css"/>');
 
 $html  = <<<EOHTML
 <div id="midcolumn">

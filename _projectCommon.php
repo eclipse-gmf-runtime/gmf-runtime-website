@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright (c) 2009, 2014 Eclipse Foundation and others.
+ * Copyright (c) 2009, 2016 Eclipse Foundation and others.
 * All rights reserved. This program and the accompanying materials
 * are made available under the terms of the Eclipse Public License v1.0
 * which accompanies this distribution, and is available at
@@ -33,6 +33,39 @@ $buildtypes = array(
 
 # Set the theme for your project's web pages.
 $theme = "solstice";
+
+# Initialize custom solstice $variables.
+$variables = array();
+
+# Add classes to <body>. (String)
+$variables['body_classes'] = '';
+
+# Insert custom HTML in the breadcrumb region. (String)
+$variables['breadcrumbs_html'] = "";
+
+# Hide the breadcrumbs. (Bool)
+$variables['hide_breadcrumbs'] = FALSE;
+
+# Insert HTML before the left nav. (String)
+$variables['leftnav_html'] = '';
+
+# Update the main container class (String)
+$variables['main_container_classes'] = 'container';
+
+# Insert HTML after opening the main content container, before the left sidebar. (String)
+$variables['main_container_html'] = '';
+
+// CFA Link - Big orange button in header
+$variables['btn_cfa'] = array(
+  'hide' => FALSE, // Optional - Hide the CFA button.
+  'html' => '', // Optional - Replace CFA html and insert custom HTML.
+  'class' => 'btn btn-huge btn-warning', // Optional - Replace class on CFA link.
+  'href' => '//www.eclipse.org/downloads/', // Optional - Replace href on CFA link.
+  'text' => '<i class="fa fa-download"></i> Download' // Optional - Replace text of CFA link.
+);
+
+# Set Solstice theme variables. (Array)
+$App->setThemeVariables($variables);
 
 # Define your project-wide Navigation here
 # This appears on the left of the page if you define a left nav
@@ -67,12 +100,7 @@ $Menu->addMenuItem("Documentation", "/gmf-runtime/documentation.php", "_self");
 $Menu->addMenuItem("About", "http://www.eclipse.org/projects/project_summary.php?projectid=modeling.gmp.gmf-runtime", "_self");
 $Menu->addMenuItem("Releases", "/gmf-runtime/releases.php", "_self");
 
-# To define additional CSS or other pre-body headers
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/gmf-runtime/style.css"/>');
-
 # To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 $App->Promotion = TRUE;
 
-# If you have Google Analytics code, use it here
-# $App->SetGoogleAnalyticsTrackingCode("YOUR_CODE");
 ?>
