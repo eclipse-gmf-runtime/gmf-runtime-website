@@ -116,12 +116,12 @@ $html = <<<EOHTML
 
 <div class="sideitem">
 <h2>Current Status</h2>
-<p>Development is underway for the proposed GMF Runtime 1.10.0 release for Eclipse Neon, due June 2016.</p>
+<p>Development is underway for the proposed GMF Runtime 1.11.0 release for Eclipse Oxygen, due June 2017.</p>
 </div>
 
 <div class="sideitem">
-<h2>GMF Runtime 1.9.0 Now Available</h2>
-<p><i>June 24, 2015 -</i> GMF Runtime 1.9.0 for Eclipse Mars has been released. Check the <a href="downloads.php">Downloads</a> page.</p
+<h2>GMF Runtime 1.10.0 Now Available</h2>
+<p><i>June 22, 2016 -</i> GMF Runtime 1.10.0 for Eclipse Neon has been released. Check the <a href="downloads.php">Downloads</a> page.</p
 </div>
 
 </div>
