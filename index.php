@@ -121,7 +121,7 @@ $html = <<<EOHTML
 
 <div class="sideitem">
 <h2>GMF Runtime 1.10.0 Now Available</h2>
-<p><i>June 22, 2016 -</i> GMF Runtime 1.10.0 for Eclipse Neon has been released. Check the <a href="downloads.php">Downloads</a> page.</p
+<p><i>June 22, 2016 -</i> GMF Runtime 1.10.0 for Eclipse Neon has been released. Check the <a href="downloads.php">Downloads</a> page.</p>
 </div>
 
 </div>
