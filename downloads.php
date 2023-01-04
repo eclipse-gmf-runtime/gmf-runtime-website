@@ -1,4 +1,4 @@
-<?php  																														
+<?php
 /*******************************************************************************
  * Copyright (c) 2009, 2016 Eclipse Foundation and others.
 * All rights reserved. This program and the accompanying materials
@@ -28,21 +28,12 @@ $html  = <<<EOHTML
 unless otherwise specified.</p>
 
 <h3>Installation via Eclipse Update Manager</h3>
-<p>Using the Eclipse Update Manager (see <a href="http://help.eclipse.org/juno/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-129.htm">Eclipse Help</a> for detailed instructions) GMF Runtime can be installed from the following update sites:
+<p>Using the Eclipse Update Manager (see <a href="https://help.eclipse.org/latest/index.jsp?topic=/org.eclipse.platform.doc.user/tasks/tasks-129.htm">Eclipse Help</a> for detailed instructions) GMF Runtime can be installed from the following update sites:
 <ul>
-	<li>Releases: <a href="http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/">http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/</a></li>
-	<li>Milestones: <a href="http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/milestones/">http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/milestones/</a></li>
-	<li>Integration: <a href="http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/interim/">http://download.eclipse.org/modeling/gmp/gmf-runtime/updates/interim/</a></li>
+	<li>Releases: <a href="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/">https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/releases/</a></li>
+	<li>Milestones: <a href="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/milestones/">https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/milestones/</a></li>
+	<li>Integration: <a href="https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/interim/">https://download.eclipse.org/modeling/gmp/gmf-runtime/updates/interim/</a></li>
 </ul>
-
-<h3>Downloadable P2 Repositories and SDK dropins</h3>
-<p>If you prefer an update-site or an SDK archive, you can download it from <a href="downloads/index.php">here directly</a>.</p>
-
-<h3>Nightly Builds</h3>
-<p>The nightly builds can also be used as a P2 repository. The nightly builds for the Mars simultaneous release can be accessed from <a href="https://hudson.eclipse.org/gmf-runtime/job/gmf-runtime-master/">Hudson</a>.</p>
-
-<h3>Translations</h3>
-<p>Translations packages can be downloaded from the <a href="http://www.eclipse.org/babel/downloads.php">Babel project downloads page</a>.</p>
 
 </div>
 EOHTML;
